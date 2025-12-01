@@ -44,11 +44,11 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
   background: var(--theme1-main-bg);
-  padding-block: 1rem;
+  padding-bottom: 1rem;
 }
 
 .main {
-  width: 85%;
+  width: 88%;
   max-width: 1000px;
   margin-inline: auto;
   min-height: 100vh;
@@ -57,7 +57,7 @@ body {
 .title-section {
   display: flex;
   justify-content: space-between;
-  padding-top: 1.7rem;
+  margin-top: 2rem;
   padding-left: 0.4rem;
   position: relative;
 }
@@ -81,11 +81,11 @@ body {
 .selectors {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .theme-selector-div a {
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--white);
   text-decoration: none;
@@ -93,12 +93,12 @@ body {
 
 .theme-switch-div {
   padding-inline: 0.38rem;
-  min-width: 4rem;
+  min-width: 4.5rem;
   padding-block: 0.3rem;
   position: relative;
   display: flex;
   justify-content: start;
-  border-radius: 10px;
+  border-radius: 12px;
   background-color: var(--theme1-toggle-bg);
 }
 
@@ -115,8 +115,6 @@ body {
   margin-top: 2.1rem;
   padding-block: 2.6rem;
   padding-left: 2rem;
-  /* display: flex;
-  justify-content: end; */
   position: relative;
   border-radius: 10px;
 }
@@ -133,10 +131,8 @@ body {
 .button-section {
   background-color: var(--theme1-screen-bg);
   margin-top: 1.8rem;
-  padding-block: 1.2rem;
-  /* width: 88%;
-  max-width: 500px;
-  margin-inline: auto; */
+  padding-block: 1.6rem;
+  border-radius: 10px;
 }
 
 .buttons-div {
@@ -144,7 +140,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   row-gap: 1rem;
   column-gap: 0.8rem;
-  padding-inline: 1.2rem;
+  padding-inline: 1.5rem;
 }
 
 .btns {
@@ -154,15 +150,22 @@ body {
   font-weight: 700;
   font-family: inherit;
   border-radius: 8px;
+  color: var(--theme1-navy-txt);
+}
+
+#delete-btn,
+.reset-btn {
+  font-size: 17px;
+  background-color: var(--theme1-main-bg);
+  color: var(--white);
+  font-weight: 700;
 }
 
 .reset-btn {
-  font-weight: 700;
   font-family: inherit;
   border-radius: 8px;
   border: none;
-  padding: 15px 0;
-  font-size: 17px;
+  padding: 22px 0;
   grid-column: 1 / 3;
 }
 
