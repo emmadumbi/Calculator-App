@@ -42,7 +42,7 @@
 }
 
 body {
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: "League Spartan", sans-serif;
   background: var(--theme1-main-bg);
   padding-bottom: 1rem;
 }
@@ -65,7 +65,8 @@ body {
 .title-section h1 {
   color: var(--white);
   font-weight: 700;
-  margin-top: 0.7rem;
+  font-size: 28px;
+  margin-top: 0.2rem;
 }
 
 .theme-txt {
@@ -75,7 +76,7 @@ body {
   font-size: 12px;
   position: absolute;
   right: 30%;
-  bottom: 7%;
+  bottom: 16%;
 }
 
 .selectors {
@@ -121,10 +122,10 @@ body {
 
 .screen p {
   color: var(--white);
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
   position: absolute;
-  top: 18px;
+  top: 25px;
   right: 20px;
 }
 
@@ -145,12 +146,15 @@ body {
 
 .btns {
   border: none;
-  padding: 15px 0;
-  font-size: 25px;
+  padding: 18px 0;
+  font-size: 32px;
   font-weight: 700;
   font-family: inherit;
   border-radius: 8px;
   color: var(--theme1-navy-txt);
+  -webkit-box-shadow: inset 0px -6px 0px -3px var(--theme1-key-bg);
+  -moz-box-shadow: inset 0px -6px 0px -3px var(--theme1-key-bg);
+  box-shadow: inset 0px -6px 0px -3px var(--theme1-key-bg);
 }
 
 #delete-btn,
@@ -176,4 +180,6 @@ body {
   border: none;
   padding: 15px 0;
   grid-column: 3 / 5;
+  background-color: var(--theme1-toggle-key-bg);
+  color: var(--white);
 }
