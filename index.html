@@ -39,27 +39,25 @@
           </div>
         </div>
       </section>
-      <section class="screen">
-        <p>399,981</p>
-      </section>
-      <section class="button-section">
-        <div class="buttons-div">
-          <button class="btns">7</button>
-          <button class="btns">8</button>
-          <button class="btns">9</button>
+      <section id="calculator">
+         <input class="screen" id="screen" readonly/>
+        <div id="keys" class="buttons-div">
+          <button onclick="appendToDisplay('7')" class="btns">7</button>
+          <button onclick="appendToDisplay('8')" class="btns">8</button>
+          <button onclick="appendToDisplay('9')" class="btns">9</button>
           <button class="btns" id="delete-btn">DEL</button>
-          <button class="btns">4</button>
-          <button class="btns">5</button>
-          <button class="btns">6</button>
-          <button class="btns">+</button>
-          <button class="btns">1</button>
-          <button class="btns">2</button>
-          <button class="btns">3</button>
-          <button class="btns">-</button>
-          <button class="btns">.</button>
-          <button class="btns">0</button>
-          <button class="btns">/</button>
-          <button class="btns">x</button>
+          <button onclick="appendToDisplay('4')" class="btns">4</button>
+          <button onclick="appendToDisplay('5')" class="btns">5</button>
+          <button onclick="appendToDisplay('6')" class="btns">6</button>
+          <button onclick="appendToDisplay('+')" class="btns">+</button>
+          <button onclick="appendToDisplay('1')" class="btns">1</button>
+          <button onclick="appendToDisplay('2')" class="btns">2</button>
+          <button onclick="appendToDisplay('3')" class="btns">3</button>
+          <button onclick="appendToDisplay('-')" class="btns">-</button>
+          <button onclick="appendToDisplay('.')" class="btns">.</button>
+          <button onclick="appendToDisplay('0')" class="btns">0</button>
+          <button onclick="appendToDisplay('/')" class="btns">/</button>
+          <button onclick="appendToDisplay('x')" class="btns">x</button>
           <button class="reset-btn">RESET</button>
           <button class="equal-btn" id="eqaul-btn">=</button>
         </div>

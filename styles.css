@@ -113,35 +113,30 @@ body {
 
 .screen {
   background-color: var(--theme1-screen-bg);
-  margin-top: 2.1rem;
-  padding-block: 2.6rem;
-  padding-left: 2rem;
-  position: relative;
-  border-radius: 10px;
-}
-
-.screen p {
-  color: var(--white);
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
-  position: absolute;
-  top: 25px;
-  right: 20px;
-}
-
-.button-section {
-  background-color: var(--theme1-screen-bg);
-  margin-top: 1.8rem;
-  padding-block: 1.6rem;
+  color: var(--white);
+  text-align: right;
+  /*margin-top: 2.1rem;*/
+  /*padding-block: 2.6rem;*/
+  padding-right: 1rem;
+  padding-block: 1.5rem;
+  margin-block: 1rem;
   border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 100%;
 }
 
 .buttons-div {
+  background: var(--theme1-screen-bg);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 1rem;
   column-gap: 0.8rem;
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  border-radius: 10px;
 }
 
 .btns {
