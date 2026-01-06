@@ -1,7 +1,15 @@
-const display = document.querySelector('#screen');
+const screen = document.querySelector('#screen');
+const operationBtns = document.querySelectorAll('[data-action="operation"]');
+const numberBtns = document.querySelectorAll('[data-action="number"]');
 
-display.value = 0;
 
-function appendToDisplay(input){
-  display.value = input;
+numberBtns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const btnValue = Number(btn.dataset.value);
+   console.log(btnValue)
+  })
+})
+
+function performOperation() {
+  // Tab to edit
 }
