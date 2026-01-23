@@ -1,83 +1,48 @@
-const numberBtns = document.querySelectorAll('[data-action="number"]');
-const screen = document.querySelector('#screen');
-const backSpaceBtn = document.querySelector('#delete-btn');
+const screen = document.querySelector("#screen");
+const keys = document.querySelector("#keys");
 
-let currentvalue = '';
-let previousValue = '';
-let initialValue = 0;
-let firstExpression;
+let screenDisplay = "0";
 
-screen.value = initialValue;
+updateScreen();
+keys.addEventListener("click", (e) => {
+  const btn = e.target;
+  const action = btn.dataset.action;
+  const value = btn.dataset.value;
+  const btnContent = btn.textContent;
 
-numberBtns.forEach((btn)=>{
-  btn.addEventListener('click',()=>{
-    displayExpression(btn.dataset.value)
-  });
+  if (action === "number") {
+    handleExpression(value);
+  } else if (action === "operator") {
+    handleExpression(value);
+  } else if (action === "delete") {
+    handleDelete();
+  } else if (action === "reset") {
+    handleReset();
+  } else if (btnContent === "=") {
+    handleCalculate();
+  }
+  updateScreen();
 });
 
-backSpaceBtn.addEventListener('click',backSpace)
-
-
-function displayExpression(value) {
-  if (screen.value === '0') {
-    screen.value = value;
-  } else {
-    screen.value += value;
-  }
-  currentvalue = screen.value;
-};
-
-function backSpace() {
-  let newScreenValue = screen.value;
-  screen.value = newScreenValue.slice(0,-1)
-  if (screen.value === '') {
-    screen.value = initialValue;
-  };
-};
-
-function addOperator(operator) {
-  
+function handleExpression(value) {
+  screenDisplay = screenDisplay === "0" ? value : screenDisplay + value;
 }
 
-
-/*let expression= '';
-
-function addValue(value) {
-  expression += value;
+function handleDelete() {
+  const newExpression = screenDisplay;
+  screenDisplay = newExpression.slice(0, -1);
+  if (screenDisplay === "") screenDisplay = "0";
 }
 
-function deleteValue() {
-  expression = expression.slice(0,-1);
+function handleReset() {
+  screenDisplay = "0";
 }
 
-function resetValue() {
-  expression = '';
+function handleCalculate() {
+  const result = eval(screenDisplay);
+  screenDisplay = result;
 }
 
-function buttonClick(event) {
-  const target = event.target;
-  const btnAction = target.dataset.action;
-  const btnValue = target.dataset.value;
-  
-  switch(btnAction){
-    case 'number':
-      addValue(btnValue)
-      break;
-    case 'operation':
-      console.log('operation')
-      break;
-    case 'delete':
-      deleteValue();
-      break;
-    case 'reset':
-      resetValue()
-      break;
-      
-  }
-  
-  screen.value = expression;
+function updateScreen() {
+  screen.value = screenDisplay;
 }
-
-keys.addEventListener('click', buttonClick)*/
-
-

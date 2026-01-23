@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -40,10 +40,13 @@
         </div>
       </section>
       <section id="calculator">
-         <input class="screen" id="screen" type="text" inputmode="none" autocomplete="off"/>
-         <!--<div id="screen" class="screen">
-           
-         </div>-->
+        <input
+          class="screen"
+          id="screen"
+          type="text"
+          inputmode="none"
+          autocomplete="off"
+        />
         <div id="keys" class="buttons-div">
           <button data-action="number" data-value="7" class="btns">7</button>
           <button data-action="number" data-value="8" class="btns">8</button>
@@ -57,10 +60,12 @@
           <button data-action="number" data-value="2" class="btns">2</button>
           <button data-action="number" data-value="3" class="btns">3</button>
           <button data-action="operator" data-value="-" class="btns">-</button>
-          <button class="btns">.</button>
+          <button data-action="number" data-value="." class="btns">.</button>
           <button data-action="number" data-value="0" class="btns">0</button>
           <button data-action="operator" data-value="/" class="btns">/</button>
-          <button data-action="operator" data-value="*" class="btns">&times;</button>
+          <button data-action="operator" data-value="*" class="btns">
+            &times;
+          </button>
           <button class="reset-btn" data-action="reset">RESET</button>
           <button class="equal-btn" id="eqaul-btn">=</button>
         </div>

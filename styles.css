@@ -117,6 +117,7 @@ body {
   font-weight: 700;
   color: var(--white);
   text-align: right;
+  font-family: inherit;
   /*margin-top: 2.1rem;*/
   /*padding-block: 2.6rem;*/
   padding-right: 1rem;
