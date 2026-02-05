@@ -45,6 +45,10 @@ body {
   font-family: "League Spartan", sans-serif;
   background: var(--theme1-main-bg);
   padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main {
@@ -118,8 +122,7 @@ body {
   color: var(--white);
   text-align: right;
   font-family: inherit;
-  /*margin-top: 2.1rem;*/
-  /*padding-block: 2.6rem;*/
+
   padding-right: 1rem;
   padding-block: 1.5rem;
   margin-block: 1rem;

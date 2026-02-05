@@ -11,9 +11,9 @@ keys.addEventListener("click", (e) => {
   const btnContent = btn.textContent;
 
   if (action === "number") {
-    handleExpression(value);
+    handleNumber(value);
   } else if (action === "operator") {
-    handleExpression(value);
+    handleOperator(value);
   } else if (action === "delete") {
     handleDelete();
   } else if (action === "reset") {
@@ -24,13 +24,37 @@ keys.addEventListener("click", (e) => {
   updateScreen();
 });
 
-function handleExpression(value) {
-  screenDisplay = screenDisplay === "0" ? value : screenDisplay + value;
+function handleNumber(value) {
+  if (screenDisplay === "0" && value !== ".") {
+    screenDisplay = value;
+  } else {
+    screenDisplay += value;
+  }
+}
+
+function handleOperator(sign) {
+  const operators = ["+", "-", "*", "/"];
+  const lastChar = screenDisplay.slice(-1);
+
+  if (screenDisplay === "0") {
+    if (sign === "-") {
+      screenDisplay = "-";
+    }
+  }
+
+  if (screenDisplay === "-") return;
+
+  if (operators.includes(lastChar)) {
+    screenDisplay = screenDisplay.slice(0, -1) + sign;
+    return;
+  }
+
+  screenDisplay += sign;
 }
 
 function handleDelete() {
-  const newExpression = screenDisplay;
-  screenDisplay = newExpression.slice(0, -1);
+  let newExpression = screenDisplay.slice(0, -1);
+  screenDisplay = newExpression;
   if (screenDisplay === "") screenDisplay = "0";
 }
 
@@ -40,7 +64,7 @@ function handleReset() {
 
 function handleCalculate() {
   const result = eval(screenDisplay);
-  screenDisplay = result;
+  screenDisplay = String(result);
 }
 
 function updateScreen() {
