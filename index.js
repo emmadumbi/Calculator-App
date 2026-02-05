@@ -68,5 +68,5 @@ function handleCalculate() {
 }
 
 function updateScreen() {
-  screen.value = screenDisplay;
+  screen.innerHTML = screenDisplay;
 }
