@@ -63,10 +63,11 @@ function handleReset() {
 }
 
 function handleCalculate() {
-  const result = eval(screenDisplay);
+  const expression = screenDisplay.replaceAll("×", "*");
+  const result = eval(expression);
   screenDisplay = String(result);
 }
 
 function updateScreen() {
-  screen.innerHTML = screenDisplay;
+  screen.innerHTML = screenDisplay.replaceAll("*", "×");
 }
